@@ -6,7 +6,7 @@ const EducationSection = () => {
   const education = [
     {
       institution: "Dawood University of Engineering and Technology",
-      degree: "Bachelor of Engineering - Cybersecurity",
+      degree: "Bachelor of Science (BS) - Cybersecurity",
       period: "Oct 2023 – Jun 2027",
       location: "Karachi, Pakistan",
       status: "Expected 2027",
@@ -26,7 +26,7 @@ const EducationSection = () => {
     },
     {
       institution: "S.M. Govt. Science College",
-      degree: "Intermediate in Science",
+      degree: "Intermediate in Pre-Engineering",
       period: "2021 – 2023",
       location: "Karachi, Pakistan",
       status: "Completed",
