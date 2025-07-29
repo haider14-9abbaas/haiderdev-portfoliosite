@@ -5,6 +5,17 @@ import { Award, Calendar, ExternalLink, Shield, Brain, Globe, BookOpen, Trophy }
 const CertificationsSection = () => {
   const certifications = [
     {
+      title: "IBM Cybersecurity Analyst",
+      issuer: "IBM",
+      date: "June 2025",
+      grade: "100%",
+      credentialId: "TQ9GCXTW2S1T",
+      verificationLink: "https://www.coursera.org/account/accomplishments/professional-cert/TQ9GCXTW2S1T",
+      category: "Cybersecurity",
+      skills: ["Malware Protection","Threat Management","Personal Identifiable Information", "Encryption","Cyber Attacks","Information Systems Security ","Multi Factor Authentication","Technical Support & Services","Network Security","Cyber Security Policies","Data Security", "Cyber Security Strategy","Information Technology","Portfolio Management","Compensation Strategy","Market Research","Applicant Tracking Systems","Interviewing Skills","Recruitment","Database Architecture and Administration","Role-Based Access Control (RBAC)","NoSQL","SQL","Secure Coding","Vulnerability Scanning","Mac OS", "Command-Line Interface", "Docker (Software)","Containerization","Linux"],
+      color: "primary"
+    },
+    {
       title: "Introduction to Cybersecurity Careers",
       issuer: "IBM",
       date: "May 2025",
