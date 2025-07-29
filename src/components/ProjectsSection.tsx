@@ -11,10 +11,9 @@ import {
   Shield,
   Server,
   Code,
-  Gamepad2
+  Gamepad,
 } from 'lucide-react';
-
-const ProjectsSection = () => {
+  const ProjectsSection = () => {
   const projectCategories = [
     {
       id: "ui-clones",
@@ -171,7 +170,7 @@ const ProjectsSection = () => {
     {
       id: "games",
       title: "Interactive Games",
-      icon: Gamepad2,
+      icon: Gamepad,
       color: "secondary",
       projects: [
         {
@@ -185,7 +184,7 @@ const ProjectsSection = () => {
       ]
     }
   ];
-
+  
   const getColorClasses = (color: string) => {
     switch (color) {
       case 'primary': return 'text-primary';
@@ -211,9 +210,8 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects" className="py-20 px-4">
+    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
-        {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-mono font-bold mb-4">
             <FolderOpen className="inline-block w-10 h-10 mr-3 text-primary" />
@@ -224,8 +222,7 @@ const ProjectsSection = () => {
             AI integration, and innovative digital solutions.
           </p>
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto">
             <div className="text-center">
               <div className="text-2xl font-mono font-bold text-primary">15+</div>
               <div className="text-sm text-muted-foreground">Total Projects</div>
@@ -245,13 +242,16 @@ const ProjectsSection = () => {
           </div>
         </div>
 
-        {/* Tabs */}
         <Tabs defaultValue="ui-clones" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 lg:grid-cols-6 cyber-border">
+          <TabsList className="flex flex-wrap sm:flex-nowrap justify-start gap-2 sm:gap-4 overflow-x-auto cyber-border">
             {projectCategories.map((category) => {
               const Icon = category.icon;
               return (
-                <TabsTrigger key={category.id} value={category.id} className="flex items-center space-x-2 data-[state=active]:bg-primary/20">
+                <TabsTrigger
+                  key={category.id}
+                  value={category.id}
+                  className="flex items-center space-x-2 whitespace-nowrap data-[state=active]:bg-primary/20"
+                >
                   <Icon className="w-4 h-4" />
                   <span className="hidden sm:inline">{category.title.split(' ')[0]}</span>
                 </TabsTrigger>
@@ -279,55 +279,52 @@ const ProjectsSection = () => {
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {category.projects.map((project, index) => (
                     <Card key={index} className="cyber-border hover-cyber group">
-                      <CardContent className="p-6">
-                        <div className="space-y-4">
-                          {/* Header */}
-                          <div className="flex items-start justify-between">
-                            <h4 className="text-lg font-mono font-bold text-foreground group-hover:text-primary transition-colors">
-                              {project.title}
-                            </h4>
-                            <div className="flex space-x-2">
-                              {project.github && (
-                                <a href={project.github} target="_blank" rel="noopener noreferrer">
-                                  <Button variant="ghost" size="sm" className="hover-cyber">
-                                    <Github className="w-4 h-4" />
-                                  </Button>
-                                </a>
-                              )}
-                              {project.live && (
-                                <a href={project.live} target="_blank" rel="noopener noreferrer">
-                                  <Button variant="ghost" size="sm" className="hover-cyber">
-                                    <ExternalLink className="w-4 h-4" />
-                                  </Button>
-                                </a>
-                              )}
-                            </div>
+                      <CardContent className="p-6 space-y-4">
+                        <div className="flex items-start justify-between">
+                          <h4 className="text-lg font-mono font-bold text-foreground group-hover:text-primary transition-colors">
+                            {project.title}
+                          </h4>
+                          <div className="flex space-x-2">
+                            {project.github && (
+                              <a href={project.github} target="_blank" rel="noopener noreferrer">
+                                <Button variant="ghost" size="sm" className="hover-cyber">
+                                  <Github className="w-4 h-4" />
+                                </Button>
+                              </a>
+                            )}
+                            {project.live && (
+                              <a href={project.live} target="_blank" rel="noopener noreferrer">
+                                <Button variant="ghost" size="sm" className="hover-cyber">
+                                  <ExternalLink className="w-4 h-4" />
+                                </Button>
+                              </a>
+                            )}
                           </div>
+                        </div>
 
-                          <Badge variant="secondary" className="cyber-border">
-                            {project.highlight}
-                          </Badge>
+                        <Badge variant="secondary" className="cyber-border">
+                          {project.highlight}
+                        </Badge>
 
-                          <p className="text-muted-foreground leading-relaxed">
-                            {project.description}
-                          </p>
+                        <p className="text-muted-foreground leading-relaxed">
+                          {project.description}
+                        </p>
 
-                          <div>
-                            <h5 className="font-semibold mb-3 text-foreground">Technologies:</h5>
-                            <div className="flex flex-wrap gap-2">
-                              {project.tech.map((tech, techIndex) => (
-                                <Badge
-                                  key={techIndex}
-                                  variant="outline"
-                                  className={`${getTechBadgeColor(tech)} hover-cyber cursor-pointer`}
-                                >
-                                  {tech}
-                                </Badge>
-                              ))}
-                            </div>
+                        <div>
+                          <h5 className="font-semibold mb-3 text-foreground">Technologies:</h5>
+                          <div className="flex flex-wrap gap-2">
+                            {project.tech.map((tech, techIndex) => (
+                              <Badge
+                                key={techIndex}
+                                variant="outline"
+                                className={`${getTechBadgeColor(tech)} hover-cyber cursor-pointer`}
+                              >
+                                {tech}
+                              </Badge>
+                            ))}
                           </div>
                         </div>
                       </CardContent>
