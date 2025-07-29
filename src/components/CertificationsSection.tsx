@@ -315,7 +315,7 @@ const CertificationsSection = () => {
             <div className="bg-gradient-to-r from-primary/10 to-accent/10 p-6 border-b border-border/50">
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="text-xl font-mono font-bold text-foreground mb-2">🎓 Recently Completed</h3>
+                  <h3 className="text-xl font-mono font-bold text-foreground mb-2">🎓</h3>
                   <h4 className="text-lg font-semibold text-primary mb-1">{ongoingCertification.title}</h4>
                   <p className="text-muted-foreground">{ongoingCertification.issuer} • {ongoingCertification.totalModules} modules</p>
                 </div>
