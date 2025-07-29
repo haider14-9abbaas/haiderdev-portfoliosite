@@ -6,7 +6,7 @@ const AboutSection = () => {
   const highlights = [
     {
       icon: Shield,
-      title: "Cybersecurity",
+      title: "Cyber Security",
       description: "Specialized in network security, penetration testing, and threat analysis"
     },
     {
@@ -21,7 +21,7 @@ const AboutSection = () => {
     },
     {
       icon: Lock,
-      title: "Cryptography",
+      title: "Crypto Graphy",
       description: "PKI, encryption methods, and secure communication protocols"
     }
   ];
@@ -59,7 +59,7 @@ const AboutSection = () => {
                   I am currently pursuing a Bachelor's degree in <strong>Cybersecurity</strong> at 
                   Dawood University of Engineering & Technology (Expected: 2027) while simultaneously 
                   advancing my skills in <strong>MERN Stack Development</strong> through the Saylani 
-                  Mass IT Program (Expected: 2026).
+                  Mass IT Program (Completed: 2025).
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   My passion lies at the intersection of cybersecurity and web development, where I 
@@ -128,7 +128,7 @@ const AboutSection = () => {
                 <div className="space-y-3">
                   <div className="flex items-center">
                     <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
-                    <span className="text-muted-foreground">IBM Cybersecurity Analyst Professional Certificate (14 modules)</span>
+                    <span className="text-muted-foreground">Nationwide IT Skillsets Expansion Program (NITSEP) - PenTest Cyber Specialist Program (6 modules)</span>
                   </div>
                   <div className="flex items-center">
                     <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>

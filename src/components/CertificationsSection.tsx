@@ -242,49 +242,56 @@ const CertificationsSection = () => {
   ];
 
   const ongoingCertification = {
-    title: "IBM Cybersecurity Analyst Professional Certificate",
-    issuer: "IBM",
-    status: "Recently Completed",
-    totalModules: 14,
-    modules: [
-      "Cybersecurity Careers", "Cybersecurity Essentials", "Tools & Cyberattacks",
-      "Operating Systems Security", "Network Security", "Database Vulnerabilities",
-      "Architecture", "Compliance & Standards", "Pen Testing & Cryptography",
-      "Incident Response", "Case Studies & Capstone", "CompTIA Security+ & CYSA+",
-      "Generative AI in Cybersecurity", "Resume & Interview Prep"
-    ]
-  };
+  title: "PenTest Cyber Specialist Program",
+  issuer: "Nationwide IT Skillsets Expansion Program (NITSEP)",
+  status: "Ongoing",
+  duration: "12 Months",
+  lecturesPerWeek: "Weekly Lectures 3",
+  startDate: "March 21, 2025",
+  onlineExam: "Quarterly",
+  eligibility: "Min. Matric",
+  medium: "Urdu / Medium",
+  totalModules: 6,
+  modules: [
+    "Network Fundamentals and Security (CCNA)",
+    "Cybersecurity Monitoring & Detection Lab",
+    "Certified Ethical Hacker (CEH)",
+    "WiFi Hacking: Wireless Penetration and Security",
+    "Penetration Testing: Web Hacking",
+    "Licensed Penetration Tester (LPT) & Bug Bounty Hunting",
+    "Capstone Project"
+  ],
+  description: [
+    "📡 Network Fundamentals and Security (CCNA): Networking concepts, security protocols, and configurations.",
+    "🛡 Cybersecurity Monitoring & Detection Lab: Tools and techniques for real-time security monitoring and incident response.",
+    "🔐 Certified Ethical Hacker (CEH): Ethical hacking methodologies, vulnerability assessment, and system penetrations.",
+    "📶 WiFi Hacking: Techniques for securing and exploiting wireless networks.",
+    "🌐 Penetration Testing: Web Hacking: Methods for identifying and exploiting web application vulnerabilities.",
+    "🎯 Licensed Penetration Tester (LPT) & Bug Bounty Hunting: Advanced testing certifications and bug bounty strategies.",
+    "🏁 Capstone Project: Applying all skills to solve a real-world security challenge."
+  ]
+};
+
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case 'Cybersecurity':
-        return Shield;
+      case 'Cybersecurity': return Shield;
       case 'AI/Technology':
-      case 'Technology':
-        return Brain;
-      case 'Database':
-        return Globe;
-      case 'Professional Skills':
-        return BookOpen;
-      default:
-        return Award;
+      case 'Technology': return Brain;
+      case 'Database': return Globe;
+      case 'Professional Skills': return BookOpen;
+      default: return Award;
     }
   };
 
   const getColorClasses = (color: string) => {
     switch (color) {
-      case 'primary':
-        return 'bg-primary/10 border-primary/30 text-primary';
-      case 'accent':
-        return 'bg-accent/10 border-accent/30 text-accent';
-      case 'cyber-green':
-        return 'bg-cyber-green/10 border-cyber-green/30 text-cyber-green';
-      case 'cyber-purple':
-        return 'bg-cyber-purple/10 border-cyber-purple/30 text-cyber-purple';
-      case 'cyber-orange':
-        return 'bg-cyber-orange/10 border-cyber-orange/30 text-cyber-orange';
-      default:
-        return 'bg-secondary/10 border-secondary/30 text-secondary-foreground';
+      case 'primary': return 'bg-primary/10 border-primary/30 text-primary';
+      case 'accent': return 'bg-accent/10 border-accent/30 text-accent';
+      case 'cyber-green': return 'bg-cyber-green/10 border-cyber-green/30 text-cyber-green';
+      case 'cyber-purple': return 'bg-cyber-purple/10 border-cyber-purple/30 text-cyber-purple';
+      case 'cyber-orange': return 'bg-cyber-orange/10 border-cyber-orange/30 text-cyber-orange';
+      default: return 'bg-secondary/10 border-secondary/30 text-secondary-foreground';
     }
   };
 
@@ -298,8 +305,7 @@ const CertificationsSection = () => {
             Certifications <span className="text-cyber-gradient">&</span> Achievements
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Continuous learning and professional development in cybersecurity, AI, and modern technologies 
-            through industry-recognized certifications and training programs.
+            Continuous learning and professional development in cybersecurity, AI, and modern technologies through industry‑recognized certifications and training programs.
           </p>
         </div>
 
@@ -309,27 +315,19 @@ const CertificationsSection = () => {
             <div className="bg-gradient-to-r from-primary/10 to-accent/10 p-6 border-b border-border/50">
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="text-xl font-mono font-bold text-foreground mb-2">
-                    🎓 Recently Completed
-                  </h3>
-                  <h4 className="text-lg font-semibold text-primary mb-1">
-                    {ongoingCertification.title}
-                  </h4>
-                  <p className="text-muted-foreground">
-                    {ongoingCertification.issuer} • {ongoingCertification.totalModules} modules
-                  </p>
+                  <h3 className="text-xl font-mono font-bold text-foreground mb-2">🎓 Recently Completed</h3>
+                  <h4 className="text-lg font-semibold text-primary mb-1">{ongoingCertification.title}</h4>
+                  <p className="text-muted-foreground">{ongoingCertification.issuer} • {ongoingCertification.totalModules} modules</p>
                 </div>
-                <Badge variant="secondary" className="cyber-border">
-                  {ongoingCertification.status}
-                </Badge>
+                <Badge variant="secondary" className="cyber-border">{ongoingCertification.status}</Badge>
               </div>
             </div>
             <div className="p-6">
               <h5 className="font-semibold mb-4 text-foreground">Course Modules:</h5>
               <div className="grid md:grid-cols-2 gap-2">
-                {ongoingCertification.modules.map((module, index) => (
-                  <div key={index} className="flex items-center p-2 rounded bg-muted/30">
-                    <div className="w-2 h-2 bg-primary rounded-full mr-3 flex-shrink-0"></div>
+                {ongoingCertification.modules.map((module, idx) => (
+                  <div key={idx} className="flex items-center p-2 rounded bg-muted/30">
+                    <div className="w-2 h-2 bg-primary rounded-full mr-3 flex-shrink-0" />
                     <span className="text-sm text-muted-foreground">{module}</span>
                   </div>
                 ))}
@@ -340,62 +338,44 @@ const CertificationsSection = () => {
 
         {/* Certifications Grid */}
         <div className="grid md:grid-cols-2 gap-6 mb-12">
-          {certifications.map((cert, index) => {
+          {certifications.map((cert, idx) => {
             const Icon = getCategoryIcon(cert.category);
             return (
-              <Card key={index} className="cyber-border hover-cyber">
+              <Card key={idx} className="cyber-border hover-cyber relative">
                 <CardContent className="p-6">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center">
                       <div className={`w-12 h-12 rounded-lg flex items-center justify-center mr-4 ${getColorClasses(cert.color)}`}>
                         <Icon className="w-6 h-6" />
                       </div>
-                      <div>
-                        <Badge variant="outline" className="cyber-border mb-2">
-                          {cert.category}
-                        </Badge>
-                      </div>
+                      <Badge variant="outline" className="cyber-border mb-2">{cert.category}</Badge>
                     </div>
                     {cert.credentialId && (
-                      <ExternalLink className="w-4 h-4 text-muted-foreground hover:text-primary cursor-pointer" />
+                      <a href={cert.verificationLink} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="w-4 h-4 text-muted-foreground hover:text-primary cursor-pointer" />
+                      </a>
                     )}
                   </div>
 
                   <div className="space-y-3">
-                    <h4 className="font-mono font-bold text-foreground leading-tight">
-                      {cert.title}
-                    </h4>
-                    
+                    <h4 className="font-mono font-bold text-foreground leading-tight">{cert.title}</h4>
                     <div className="flex items-center text-primary font-semibold">
-                      <Award className="w-4 h-4 mr-2" />
-                      {cert.issuer}
+                      <Award className="w-4 h-4 mr-2" /> {cert.issuer}
                     </div>
-
                     <div className="flex items-center text-muted-foreground">
-                      <Calendar className="w-4 h-4 mr-2" />
-                      {cert.date}
-                      {cert.grade && (
-                        <Badge variant="secondary" className="ml-2">
-                          Grade: {cert.grade}
-                        </Badge>
-                      )}
+                      <Calendar className="w-4 h-4 mr-2" /> {cert.date}
+                      {cert.grade && <Badge variant="secondary" className="ml-2">Grade: {cert.grade}</Badge>}
                     </div>
-
                     {cert.credentialId && (
                       <div className="text-sm text-muted-foreground">
                         <strong>Credential ID:</strong> {cert.credentialId}
                       </div>
                     )}
-
                     <div>
                       <h5 className="font-semibold mb-2 text-foreground">Skills:</h5>
                       <div className="flex flex-wrap gap-2">
-                        {cert.skills.map((skill, skillIndex) => (
-                          <Badge 
-                            key={skillIndex} 
-                            variant="outline" 
-                            className="cyber-border hover-cyber cursor-pointer text-xs"
-                          >
+                        {cert.skills.map((skill, sIdx) => (
+                          <Badge key={sIdx} variant="outline" className="cyber-border hover-cyber cursor-pointer text-xs">
                             {skill}
                           </Badge>
                         ))}
@@ -413,11 +393,8 @@ const CertificationsSection = () => {
           <CardContent className="p-6">
             <div className="text-center mb-6">
               <h3 className="text-xl font-mono font-bold mb-2">Certification Overview</h3>
-              <p className="text-muted-foreground">
-                Professional development across multiple technology domains
-              </p>
+              <p className="text-muted-foreground">Professional development across multiple technology domains</p>
             </div>
-            
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
               <div className="space-y-2">
                 <div className="w-16 h-16 cyber-gradient rounded-full flex items-center justify-center mx-auto">
@@ -426,7 +403,6 @@ const CertificationsSection = () => {
                 <h4 className="font-mono font-semibold">10+</h4>
                 <p className="text-sm text-muted-foreground">Completed Certifications</p>
               </div>
-              
               <div className="space-y-2">
                 <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto">
                   <Shield className="w-8 h-8 text-accent-foreground" />
@@ -434,7 +410,6 @@ const CertificationsSection = () => {
                 <h4 className="font-mono font-semibold">7</h4>
                 <p className="text-sm text-muted-foreground">Cybersecurity Focus</p>
               </div>
-              
               <div className="space-y-2">
                 <div className="w-16 h-16 bg-cyber-green rounded-full flex items-center justify-center mx-auto">
                   <Brain className="w-8 h-8 text-background" />
@@ -442,7 +417,6 @@ const CertificationsSection = () => {
                 <h4 className="font-mono font-semibold">3</h4>
                 <p className="text-sm text-muted-foreground">Tech & AI</p>
               </div>
-              
               <div className="space-y-2">
                 <div className="w-16 h-16 bg-cyber-purple rounded-full flex items-center justify-center mx-auto">
                   <BookOpen className="w-8 h-8 text-background" />

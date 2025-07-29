@@ -32,7 +32,7 @@ const EducationSection = () => {
       status: "Completed",
       description: "Pre-engineering studies with focus on Mathematics, Physics, and Chemistry, building analytical foundation.",
       skills: ["Mathematics", "Physics", "Chemistry", "Analytical Thinking"],
-      color: "secondary"
+      color: "accent"
     },
     {
       institution: "Habib Public School",
@@ -42,7 +42,7 @@ const EducationSection = () => {
       status: "Completed",
       description: "Foundation education with strong emphasis on science subjects and academic excellence.",
       skills: ["Science", "Mathematics", "Academic Excellence","Computer Science" ,"History" ,"Geography"],
-      color: "muted"
+      color: "accent"
     }
   ];
 

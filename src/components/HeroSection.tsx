@@ -4,7 +4,10 @@ import { Github, Linkedin, Mail, Download, Shield, Code2 } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center pt-16 px-4">
+    <section
+      id="home"
+      className="min-h-[90vh] flex items-center justify-center pt-24 md:pt-20 px-4"
+    >
       <div className="max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
@@ -17,18 +20,18 @@ const HeroSection = () => {
                 </Badge>
                 <Badge variant="outline" className="cyber-border">
                   <Code2 className="w-3 h-3 mr-1" />
-                  MERN Developer
+                  MERN Stack Developer
                 </Badge>
               </div>
-              
+
               <h1 className="text-4xl md:text-6xl font-mono font-bold leading-tight">
                 <span className="text-cyber-gradient">Syed Haider</span>
                 <br />
                 <span className="text-foreground">Abbas Zaidi</span>
               </h1>
-              
+
               <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
-                Cybersecurity enthusiast and MERN stack developer passionate about 
+                Cybersecurity enthusiast and MERN stack developer passionate about
                 digital security, web development, and innovative problem-solving.
               </p>
             </div>

@@ -67,7 +67,7 @@ const ContactSection = () => {
   ];
 
   const quickLinks = [
-    { label: "Download Resume", icon: Download, action: "download" },
+    { label: "Resume", icon: Download, action: "download" },
     { label: "View LinkedIn", icon: Linkedin, action: "linkedin" },
     { label: "View GitHub", icon: Github, action: "github" },
     { label: "Send Email", icon: Mail, action: "email" }
