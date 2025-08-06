@@ -152,7 +152,7 @@ const ContactSection = () => {
               } else if (link.action === 'github') {
                 window.open('https://github.com/haider14-9abbaas', '_blank');
               } else if (link.action === 'download') {
-                window.open('https://docs.google.com/document/d/1rOe8YpGe6_Xko8bQPwEJjVUIbrJUJryF/edit?usp=sharing&ouid=117431377946953981873&rtpof=true&sd=true', '_blank');
+                window.open('https://docs.google.com/document/d/1SwJnQ4-aR5Rppxw4eUdtFPCyigs1ukvW/edit?usp=drivesdk&ouid=117431377946953981873&rtpof=true&sd=true', '_blank');
               }
             }}
           >
